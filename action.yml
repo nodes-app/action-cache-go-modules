@@ -1,5 +1,5 @@
 name: Cache Go Modules
-description: Caches Go Modules
+description: Sets Up Go Module Caching
 branding:
   icon: save
   color: blue
@@ -7,8 +7,7 @@ runs:
   using: composite
   steps:
     # See https://github.com/actions/cache/blob/main/examples.md#linux-1
-    - name: Set Up Go Module Caching
-      uses: actions/cache@v3
+    - uses: actions/cache@v3
       with:
         path: |
           ~/.cache/go-build
