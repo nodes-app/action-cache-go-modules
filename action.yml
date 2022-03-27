@@ -1,15 +1,18 @@
-name: Hello
-description: Say hello
+name: Cache Go Modules
+description: Caches Go Modules
 branding:
-  icon: activity
+  icon: save
   color: blue
-inputs:
-  foo:
-    description: Foo
-    required: true
 runs:
   using: composite
   steps:
-    - shell: bash
-      run: |
-        echo 'Hello, World!'
+    # See https://github.com/actions/cache/blob/main/examples.md#linux-1
+    - name: Set Up Go Module Cache
+      uses: actions/cache@v3
+      with:
+        path: |
+          ~/.cache/go-build
+          ~/go/pkg/mod
+        key: ${{ runner.os }}-go-${{ hashFiles('**/go.sum') }}
+        restore-keys: |
+          ${{ runner.os }}-go-
