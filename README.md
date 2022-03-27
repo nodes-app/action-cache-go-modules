@@ -6,5 +6,5 @@
 
 ```yml
 - name: Set Up Go Module Cache
-  uses: nodes-app/action-cache-go-modules
+  uses: nodes-app/action-cache-go-modules@v1
 ```
