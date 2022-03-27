@@ -7,7 +7,7 @@ runs:
   using: composite
   steps:
     # See https://github.com/actions/cache/blob/main/examples.md#linux-1
-    - name: Set Up Go Module Cache
+    - name: Set Up Go Module Caching
       uses: actions/cache@v3
       with:
         path: |
