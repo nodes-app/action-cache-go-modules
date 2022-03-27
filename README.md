@@ -5,6 +5,6 @@
 ## Usage
 
 ```yml
-- name: Set Up Go Module Cache
+- name: Set Up Go Module Caching
   uses: nodes-app/action-cache-go-modules@v1
 ```
